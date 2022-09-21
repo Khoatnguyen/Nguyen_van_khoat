@@ -1,0 +1,22 @@
+<table>
+<tr>
+    <th>
+        <label>Student ID</label>
+    </th>
+    <th>
+        <label>Student name</label>
+    </th>
+    <th>
+        <label>Age</label>
+    </th>
+</tr>
+@foreach (var item in ViewData["Employee"] as List<Employee>)
+    {
+        <tr>
+            <th>@item.EmployeeID</th>
+            <th>@item.EmployeeName</th>
+            <th>@item.Age</th>
+        </tr>
+    }
+
+    </table>
