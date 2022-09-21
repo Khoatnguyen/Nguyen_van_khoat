@@ -10,8 +10,8 @@ namespace PTPMQL.Controllers
             List<Employee> stdList = new List<Employee>()
             {
                  new Employee {EmployeeID=1, EmployeeName= "Nguyen Van A", Age= 18},    
-                  new Employee {EmployeeID=2, EmployeeName= "Nguyen Van f", Age= 18},    
-                   new Employee {EmployeeID=3, EmployeeName= "Nguyen Van e", Age= 18},    
+                 new Employee {EmployeeID=2, EmployeeName= "Nguyen Van f", Age= 18},    
+                 new Employee {EmployeeID=3, EmployeeName= "Nguyen Van e", Age= 18},    
            };
            ViewData["Employee"]= stdList;
         return View();
