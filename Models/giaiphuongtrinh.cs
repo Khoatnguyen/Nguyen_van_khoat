@@ -23,21 +23,21 @@ namespace PTPMQL.Models{
         string message="";
         double x1 ;
         double x2;
-        double denta;
+        double denta = soB*soB-4*soA*soC;
+
         if(soA==0){
             message = giaiphuongtrinhbacmot(soB, soC);
         }else{
-            denta = (soB*soB)-4*soA*soC;
             if(denta < 0){
                 message ="Phuong trinh vo nghiem";
             }else if(denta == 0){
                 x1= - soB/(soA*2);
                 message ="phuong trinh co 1 nghiem x= "+x1;
             }else if(denta > 0){
-                x1= (-soB + Math.Sqrt(denta))/(2*soA);
-                x2= (-soB - Math.Sqrt(denta))/(2*soA);
-                message ="Phuong trinh co 2 nghiem x1 ="+x1 +"x2="+x2;
-                
+                x1= ((-soB + Math.Sqrt(denta))/2*soA);
+                x2= ((-soB - Math.Sqrt(denta))/2*soA);
+                 message ="Phuong trinh co 2 nghiem x1 ="+x1 +"x2="+x2;
+
             }
         }
         return message;
